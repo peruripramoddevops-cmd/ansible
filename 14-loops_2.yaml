@@ -1,0 +1,13 @@
+- name: installing using loops
+  hosts: local
+  connection: local
+  tasks:
+  - name: print names
+    ansible.builtin.package:
+      name: "{{item.name}}"
+      status: "{{item.status}}"
+    loop:
+     - { name: nginx, status:absent}
+     - { name: mysql, status:absent} 
+     - { name: python, status:present}
+    

@@ -1,0 +1,17 @@
+- name: Data Types
+  hosts: local
+  connection: local
+  vars:
+     Course: "Devops with aws"
+     Duration: 10
+     tools: 
+      - linux
+      - shell
+      - ansible
+     concepts:
+      cloud: aws
+      cm: ansible
+  tasks:
+   - name: print info
+     ansible.builtin.debug:
+       msg: "Course is {{Course}}, Duration is {{Duration}}, tools is {{tools}}, concepts is {{concepts}}" 

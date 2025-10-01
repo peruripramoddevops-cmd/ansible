@@ -1,0 +1,11 @@
+- name: Key level vars
+  hosts: local
+  connection: local
+  vars:
+      Course: ansible  
+      Duration: 10HRS
+  tasks:
+    - name: print vars
+      ansible.builtin.debug:
+        msg: "Course name is {{ansible}}, Duration is {{Duration}}"
+        
