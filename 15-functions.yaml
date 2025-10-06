@@ -6,7 +6,7 @@
   tasks:
    - name: default varaiable
      ansible.builtin.debug:
-      msg: "Hello {{ name | default(Ramesh) }}"
+      msg: "Hello {{ name | default('Ramesh') }}"
    - name: Convert string to list
      ansible.builtin.debug:
       msg : "Technologies are: {{ technologies | split(',') }}"
