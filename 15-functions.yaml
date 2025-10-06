@@ -11,7 +11,7 @@
      ansible.builtin.debug:
       msg : "Technologies are: {{ technologies | split(',') }}"
    - name: read yaml and take into varaiable
-     ansible.builtin.set_facts:
+     ansible.builtin.set_fact:
       student_yaml: "{{lookup('file', 'student.yaml') | from_yaml }}"
    - name: convert yaml to json
      ansible.builtin.debug:
